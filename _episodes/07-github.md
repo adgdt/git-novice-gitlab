@@ -113,10 +113,13 @@ your local repo:
 
 ~~~
 $ git status
+~~~
+{: .bash}
+~~~
 On branch master
 nothing to commit, working tree clean
 ~~~
-{: .bash}
+{: .output}
 
 Then, this command will push your changes from our local repository to the repository on GitLab:
 ~~~
@@ -277,9 +280,9 @@ GitLab, though, this command would download them to our local repository.
 
 > ## GitLab README files
 >
-> In this section we learned about creating a remote repository on GitLab. Sometimes it is useful to let others know what is your repo about by means of a introduction or brief description of the projec. This is done by making a special i`Markdown` file named `README.md`. Create this file in your local repo writing a brief description of your project in it. Push it to GitLab afterwards. What do you see when browsing your GitLab repo?
+> In this section we learned about creating a remote repository on GitLab. Sometimes it is useful to let others know what is your repo about by means of a introduction or brief description of the project. This is done by making a special `Markdown` file `README.md`. Create this file in your local repo writing a brief description of your project in it. Push it to GitLab afterwards. What do you see when browsing your GitLab repo?
 >
 > > ## Solution
-> > You see a nice preview of the file at the frontpage of your GitLab repository. Try to enhance the look by using [Markdown](https://docs.gitlab.com/ee/user/markdown.html) :star
+> > You see a nice preview of the file at the frontpage of your GitLab repository. Try to enhance the look by using [Markdown](https://docs.gitlab.com/ee/user/markdown.html)
 > {: .solution}
 {: .challenge}
