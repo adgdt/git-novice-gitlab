@@ -27,13 +27,18 @@ and cons of this in the final section of this lesson.
 
 Let's start by sharing the changes we've made to our current project with the
 world.  Log in to GitLab, then click on the icon in the top right corner to
-create a new repository called `planets`:
+create a new repository called `planets_coll`. The coll stands for collaboration 
+and we chose it this way to emphasize the difference with our local `planets` folder. The convenience of 
+it will be apparent very soon. Meanwhile let's create the repo:
 
 ![Creating a Repository on GitLab (Step 1)](../fig/gitlab-create-repo-01.png)
 
-Name your repository "planets" and then click "New project":
+Name your repository `planets_coll` and then click `New project`:
 
-![Creating a Repository on GitLab (Step 2)](../fig/github-create-repo-02.png)
+![Creating a Repository on GitLab (Step 2)](../fig/gitlab-create-repo-02.png)
+
+Have a look to the different `Visibility Levels`, they will allow you to tune the access to the data stored in 
+the remote repository in GitLab.
 
 As soon as the repository is created, GitLab displays a page with a URL and some
 information on how to configure your local repository:
