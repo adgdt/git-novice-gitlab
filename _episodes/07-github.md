@@ -37,19 +37,18 @@ Name your repository `planets_coll` and then click `New project`:
 
 ![Creating a Repository on GitLab (Step 2)](../fig/gitlab-create-repo-02.png)
 
-Have a look to the different `Visibility Levels`, they will allow you to tune the access to the data stored in 
-the remote repository in GitLab.
+Have a look to the different `Visibility Levels`, they will allow you to tune access to the data stored in GitLab.
 
 As soon as the repository is created, GitLab displays a page with a URL and some
 information on how to configure your local repository:
 
-![Creating a Repository on GitLab (Step 3)](../fig/github-create-repo-03.png)
+![Creating a Repository on GitLab (Step 3)](../fig/gitlab-create-repo-03.png)
 
 This effectively does the following on GitLab's servers:
 
 ~~~
-$ mkdir planets
-$ cd planets
+$ mkdir planets_coll
+$ cd planets_coll
 $ git init
 ~~~
 {: .bash}
@@ -64,9 +63,9 @@ GitLab repository a [remote]({{ page.root }}/reference/#remote) for the local re
 The home page of the repository on GitLab includes the string we need to
 identify it:
 
-![Where to Find Repository URL on GitLab](../fig/github-find-repo-string.png)
+![Where to Find Repository URL on GitLab](../fig/gitlab-find-repo-string.png)
 
-Click on the 'HTTPS' link to change the [protocol]({{ page.root }}/reference/#protocol) from
+If not already set, click on the 'HTTPS' link to change the [protocol]({{ page.root }}/reference/#protocol) from
 SSH to HTTPS.
 
 > ## HTTPS vs. SSH
@@ -80,18 +79,17 @@ SSH to HTTPS.
 > (this one has a screencast).
 {: .callout}
 
-![Changing the Repository URL on GitLab](../fig/github-change-repo-string.png)
 
 Copy that URL from the browser, go into the local `planets` repository, and run
 this command:
 
 ~~~
-$ git remote add origin https://github.com/vlad/planets.git
+$ git remote add origin https://gitlab.ift.uam-csic.es/scwtest/planets_coll.git
 ~~~
 {: .bash}
 
-Make sure to use the URL for your repository rather than Vlad's: the only
-difference should be your username instead of `vlad`.
+Make sure to use the URL for your repository rather than SCWtest's: the only
+difference should be your username instead of `scwtest`.
 
 We can check that the command has worked by running `git remote -v`:
 
@@ -101,17 +99,26 @@ $ git remote -v
 {: .bash}
 
 ~~~
-origin   https://github.com/vlad/planets.git (push)
-origin   https://github.com/vlad/planets.git (fetch)
+origin   https://gitlab.ift.uam-csic.es/scwtest/planets_coll.git (push)
+origin   https://gitlab.ift.uam-csic.es/scwtest/planets_coll.git (fetch)
 ~~~
 {: .output}
 
 The name `origin` is a local nickname for your remote repository. We could use
 something else if we wanted to, but `origin` is by far the most common choice.
 
-Once the nickname `origin` is set up, this command will push the changes from
-our local repository to the repository on GitLab:
+Once the nickname `origin` is set up, let's push changes from
+our local repository to the repository on GitLab. First check that you are up to date in
+your local repo:
 
+~~~
+$ git status
+On branch master
+nothing to commit, working tree clean
+~~~
+{: .bash}
+
+Then, this command will push your changes from our local repository to the repository on GitLab:
 ~~~
 $ git push origin master
 ~~~
@@ -123,7 +130,7 @@ Delta compression using up to 4 threads.
 Compressing objects: 100% (6/6), done.
 Writing objects: 100% (9/9), 821 bytes, done.
 Total 9 (delta 2), reused 0 (delta 0)
-To https://github.com/vlad/planets
+To https://gitlab.ift.uam-csic.es/scwtest/planets_coll
  * [new branch]      master -> master
 Branch master set up to track remote branch master from origin.
 ~~~
@@ -195,7 +202,7 @@ $ git pull origin master
 {: .bash}
 
 ~~~
-From https://github.com/vlad/planets
+From https://gitlab.ift.uam-csic.es/scwtest/planets_coll
  * branch            master     -> FETCH_HEAD
 Already up-to-date.
 ~~~
@@ -207,16 +214,17 @@ GitLab, though, this command would download them to our local repository.
 
 > ## GitLab GUI
 >
-> Browse to your `planets` repository on GitLab.
-> Under the Code tab, find and click on the text that says "XX commits" (where "XX" is some number).
+> Browse to your `planets_coll` repository on GitLab.
+> In the home or Details tab, find and click on the text that say "Commits(XX)" (where "XX" is some number).
 > Hover over, and click on, the three buttons to the right of each commit.
 > What information can you gather/explore from these buttons?
 > How would you get that same information in the shell?
 >
 > > ## Solution
-> > The left-most button (with the picture of a clipboard) copies the full identifier of the commit to the clipboard. In the shell, ```git log``` will show you the full commit identifier for each commit.
 > >
-> > When you click on the middle button, you'll see all of the changes that were made in that particular commit. Green shaded lines indicate additions and red ones removals. In the shell we can do the same thing with ```git diff```. In particular, ```git diff ID1..ID2``` where ID1 and ID2 are commit identifiers (e.g. ```git diff a3bf1e5..041e637```) will show the differences between those two commits.
+> > When you click on the button with the commit ID, you'll see all of the changes that were made in that particular commit. Green shaded lines indicate additions and red ones removals. In the shell we can do the same thing with ```git diff```. In particular, ```git diff ID1..ID2``` where ID1 and ID2 are commit identifiers (e.g. ```git diff a3bf1e5..041e637```) will show the differences between those two commits.
+> >
+> > The middle button (with the picture of a clipboard) copies the full identifier of the commit to the clipboard. In the shell, ```git log``` will show you the full commit identifier for each commit.
 > >
 > > The right-most button lets you view all of the files in the repository at the time of that commit. To do this in the shell, we'd need to checkout the repository at that particular time. We can do this with ```git checkout ID``` where ID is the identifier of the commit we want to look at. If we do this, we need to remember to put the repository back to the right state afterwards!
 > {: .solution}
@@ -252,7 +260,7 @@ GitLab, though, this command would download them to our local repository.
 > First start by adding a remote with an invalid URL:
 >
 > ~~~
-> git remote add broken https://github.com/this/url/is/invalid
+> git remote add broken https://gitlab.ift.uam-csic.es/this/url/is/invalid
 > ~~~
 > {: .bash}
 >
@@ -267,13 +275,11 @@ GitLab, though, this command would download them to our local repository.
 > {: .solution}
 {: .challenge}
 
-> ## GitLab License and README files
+> ## GitLab README files
 >
-> In this section we learned about creating a remote repository on GitLab, but when you initialized your
-> GitLab repo, you didn't add a README.md or a license file. If you had, what do you think would have happened when
-> you tried to link your local and remote repositories?
+> In this section we learned about creating a remote repository on GitLab. Sometimes it is useful to let others know what is your repo about by means of a introduction or brief description of the projec. This is done by making a special i`Markdown` file named `README.md`. Create this file in your local repo writing a brief description of your project in it. Push it to GitLab afterwards. What do you see when browsing your GitLab repo?
 >
 > > ## Solution
-> > In this case, since we already had a README file in our own (local) repository, we'd see a merge conflict (when git realises that there are two versions of the file and asks us to reconcile the differences).
+> > You see a nice preview of the file at the frontpage of your GitLab repository. Try to enhance the look by using [Markdown](https://docs.gitlab.com/ee/user/markdown.html) :star
 > {: .solution}
 {: .challenge}
