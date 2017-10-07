@@ -189,7 +189,7 @@ GitLab) are back in sync.
 > With GitLab, it is possible to comment the diff of a commit. On the `Commit` tab, select
 > the desired commit and you will find a textbox for comments just below the diff.
 >
-> The Collaborator posts its comments and suggestions using GitLab interface.
+> The Collaborator posts its comments and suggestions using GitLab interface, and they are notified to Owner by email.
 {: .challenge}
 
 > ## Version History, Backup, and Version Control
