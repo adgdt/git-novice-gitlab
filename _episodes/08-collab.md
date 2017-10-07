@@ -40,7 +40,13 @@ Click on the textfield "Select members to invite" and pick your Collaborator:
 > If you need a different permission level for your collaborators have a look to the [GitLab documentation](https://docs.gitlab.com/ee/user/permissions.html).
 >
 {: .callout}
+
+Add `Developer` role to your Collaborator:
+
 ![Adding Collaborator](../fig/gitlab-add-collaborator-03.png)
+
+And finish the proccess by clicking `Add to project`:
+
 ![Finishing the proccess](../fig/gitlab-add-collaborator-04.png)
 
 To accept access to the Owner's repo, the Collaborator
