@@ -39,7 +39,8 @@ Click on the textfield "Select members to invite" and pick your Collaborator:
 > role is well enougth, as well as for the requierements for a real-world scientific collaborator. 
 > If you need a different permission level for your collaborators have a look to the [GitLab documentation](https://docs.gitlab.com/ee/user/permissions.html).
 >
-> ~~
+{: .callout}
+~~~
 ![Adding Collaborator](../fig/gitlab-add-collaborator-03.png)
 ![Finishing the proccess](../fig/gitlab-add-collaborator-04.png)
 
