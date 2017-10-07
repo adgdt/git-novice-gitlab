@@ -59,11 +59,11 @@ her `home` folder, the Collaborator enters:
 
 ~~~
 $ cd ~
-$ git clone https://gitlab.ift.uam-csic.es/scwtest/planets_coll_scwtest.git
+$ git clone https://gitlab.ift.uam-csic.es/vlad/planets_vlad.git
 ~~~
 {: .bash}
 
-Remember the Collaborator must replace `scwtest` with the Owner's username.
+Remember the Collaborator must replace `vlad` with the Owner's username.
 
 ![After Creating Clone of Repository](../fig/github-collaboration.svg)
 
@@ -71,7 +71,7 @@ The Collaborator can now make a change in her clone of the Owner's repository,
 exactly the same way as we've been doing before:
 
 ~~~
-$ cd ~/planets_coll_scwtest
+$ cd ~/planets_vlad
 $ nano pluto.txt
 $ cat pluto.txt
 ~~~

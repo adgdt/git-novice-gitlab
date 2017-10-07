@@ -84,12 +84,12 @@ Copy that URL from the browser, go into the local `planets` repository, and run
 this command:
 
 ~~~
-$ git remote add origin https://gitlab.ift.uam-csic.es/scwtest/planets_vlad.git
+$ git remote add origin https://gitlab.ift.uam-csic.es/vlad/planets_vlad.git
 ~~~
 {: .bash}
 
 Make sure to use the URL for your repository rather than SCWtest's: the only
-difference should be your username instead of `scwtest`.
+difference should be your username instead of `vlad`.
 
 We can check that the command has worked by running `git remote -v`:
 
@@ -99,8 +99,8 @@ $ git remote -v
 {: .bash}
 
 ~~~
-origin   https://gitlab.ift.uam-csic.es/scwtest/planets_vlad.git (push)
-origin   https://gitlab.ift.uam-csic.es/scwtest/planets_vlad.git (fetch)
+origin   https://gitlab.ift.uam-csic.es/vlad/planets_vlad.git (push)
+origin   https://gitlab.ift.uam-csic.es/vlad/planets_vlad.git (fetch)
 ~~~
 {: .output}
 
@@ -133,7 +133,7 @@ Delta compression using up to 4 threads.
 Compressing objects: 100% (6/6), done.
 Writing objects: 100% (9/9), 821 bytes, done.
 Total 9 (delta 2), reused 0 (delta 0)
-To https://gitlab.ift.uam-csic.es/scwtest/planets_vlad
+To https://gitlab.ift.uam-csic.es/vlad/planets_vlad
  * [new branch]      master -> master
 Branch master set up to track remote branch master from origin.
 ~~~
@@ -205,7 +205,7 @@ $ git pull origin master
 {: .bash}
 
 ~~~
-From https://gitlab.ift.uam-csic.es/scwtest/planets_vlad
+From https://gitlab.ift.uam-csic.es/vlad/planets_vlad
  * branch            master     -> FETCH_HEAD
 Already up-to-date.
 ~~~
