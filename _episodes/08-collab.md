@@ -41,11 +41,11 @@ Click on the textfield "Select members to invite" and pick your Collaborator:
 >
 {: .callout}
 
-Add `Developer` role to your Collaborator:
+Add `Developer` role to your Collaborator and finish the proccess by clicking `Add to project`:
 
 ![Adding Collaborator](../fig/gitlab-add-collaborator-03.png)
 
-And finish the proccess by clicking `Add to project`:
+The member list of the project should look this way:
 
 ![Finishing the proccess](../fig/gitlab-add-collaborator-04.png)
 
