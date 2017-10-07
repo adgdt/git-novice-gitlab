@@ -51,7 +51,7 @@ This line added to Wolfman's copy
 ~~~
 {: .output}
 
-and then push the change to GitHub:
+and then push the change to GitLab:
 
 ~~~
 $ git add mars.txt
@@ -76,14 +76,14 @@ Delta compression using up to 4 threads.
 Compressing objects: 100% (3/3), done.
 Writing objects: 100% (3/3), 352 bytes, done.
 Total 3 (delta 1), reused 0 (delta 0)
-To https://github.com/vlad/planets
+To https://gitlab.ift.uam-csic.es/vlad/planets
    29aba7c..dabb4c8  master -> master
 ~~~
 {: .output}
 
 Now let's have the other partner
 make a different change to their copy
-*without* updating from GitHub:
+*without* updating from GitLab:
 
 ~~~
 $ nano mars.txt
@@ -113,7 +113,7 @@ $ git commit -m "Add a line in my copy"
 ~~~
 {: .output}
 
-but Git won't let us push it to GitHub:
+but Git won't let us push it to GitLab:
 
 ~~~
 $ git push origin master
@@ -121,9 +121,9 @@ $ git push origin master
 {: .bash}
 
 ~~~
-To https://github.com/vlad/planets.git
+To https://gitlab.ift.uam-csic.es/vlad/planets.git
  ! [rejected]        master -> master (non-fast-forward)
-error: failed to push some refs to 'https://github.com/vlad/planets.git'
+error: failed to push some refs to 'https://gitlab.ift.uam-csic.es/vlad/planets.git'
 hint: Updates were rejected because the tip of your current branch is behind
 hint: its remote counterpart. Merge the remote changes (e.g. 'git pull')
 hint: before pushing again.
@@ -135,7 +135,7 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 
 Git detects that the changes made in one copy overlap with those made in the other
 and stops us from trampling on our previous work.
-What we have to do is pull the changes from GitHub,
+What we have to do is pull the changes from GitLab,
 [merge]({{ page.root }}/reference/#merge) them into the copy we're currently working in,
 and then push that.
 Let's start by pulling:
@@ -150,7 +150,7 @@ remote: Counting objects: 5, done.
 remote: Compressing objects: 100% (2/2), done.
 remote: Total 3 (delta 1), reused 3 (delta 1)
 Unpacking objects: 100% (3/3), done.
-From https://github.com/vlad/planets
+From https://gitlab.ift.uam-csic.es/vlad/planets
  * branch            master     -> FETCH_HEAD
 Auto-merging mars.txt
 CONFLICT (content): Merge conflict in mars.txt
@@ -180,7 +180,7 @@ This line added to Wolfman's copy
 
 Our change—the one in `HEAD`—is preceded by `<<<<<<<`.
 Git has then inserted `=======` as a separator between the conflicting changes
-and marked the end of the content downloaded from GitHub with `>>>>>>>`.
+and marked the end of the content downloaded from GitLab with `>>>>>>>`.
 (The string of letters and digits after that marker
 identifies the commit we've just downloaded.)
 
@@ -227,16 +227,16 @@ Changes to be committed:
 {: .output}
 
 ~~~
-$ git commit -m "Merge changes from GitHub"
+$ git commit -m "Merge changes from GitLab"
 ~~~
 {: .bash}
 
 ~~~
-[master 2abf2b1] Merge changes from GitHub
+[master 2abf2b1] Merge changes from GitLab
 ~~~
 {: .output}
 
-Now we can push our changes to GitHub:
+Now we can push our changes to GitLab:
 
 ~~~
 $ git push origin master
@@ -249,7 +249,7 @@ Delta compression using up to 4 threads.
 Compressing objects: 100% (6/6), done.
 Writing objects: 100% (6/6), 697 bytes, done.
 Total 6 (delta 2), reused 0 (delta 0)
-To https://github.com/vlad/planets.git
+To https://gitlab.ift.uam-csic.es/vlad/planets.git
    dabb4c8..2abf2b1  master -> master
 ~~~
 {: .output}
@@ -268,7 +268,7 @@ remote: Counting objects: 10, done.
 remote: Compressing objects: 100% (4/4), done.
 remote: Total 6 (delta 2), reused 6 (delta 2)
 Unpacking objects: 100% (6/6), done.
-From https://github.com/vlad/planets
+From https://gitlab.ift.uam-csic.es/vlad/planets
  * branch            master     -> FETCH_HEAD
 Updating dabb4c8..2abf2b1
 Fast-forward
@@ -377,9 +377,9 @@ Conflicts can also be minimized with project management strategies:
 > > {: .bash}
 > >
 > > ~~~
-> > To https://github.com/vlad/planets.git
+> > To https://gitlab.ift.uam-csic.es/vlad/planets.git
 > >  ! [rejected]        master -> master (fetch first)
-> > error: failed to push some refs to 'https://github.com/vlad/planets.git'
+> > error: failed to push some refs to 'https://gitlab.ift.uam-csic.es/vlad/planets.git'
 > > hint: Updates were rejected because the remote contains work that you do
 > > hint: not have locally. This is usually caused by another repository pushing
 > > hint: to the same ref. You may want to first integrate the remote changes
@@ -404,7 +404,7 @@ Conflicts can also be minimized with project management strategies:
 > > remote: Compressing objects: 100% (3/3), done.
 > > remote: Total 3 (delta 0), reused 0 (delta 0)
 > > Unpacking objects: 100% (3/3), done.
-> > From https://github.com/vlad/planets.git
+> > From https://gitlab.ift.uam-csic.es/vlad/planets.git
 > >  * branch            master     -> FETCH_HEAD
 > >    6a67967..439dc8c  master     -> origin/master
 > > warning: Cannot merge binary files: mars.jpg (HEAD vs. 439dc8c08869c342438f6dc4a2b615b05b93c76e)
