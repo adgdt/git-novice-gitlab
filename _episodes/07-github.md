@@ -27,13 +27,13 @@ and cons of this in the final section of this lesson.
 
 Let's start by sharing the changes we've made to our current project with the
 world.  Log in to GitLab, then click on the icon in the top right corner to
-create a new repository called `planets_coll_swctest`. The coll stands for collaboration 
+create a new repository called `planets_vlad`. The coll stands for collaboration 
 and we chose it this way to emphasize the difference with our local `planets` folder. The convenience of 
 it will be apparent very soon. Meanwhile let's create the repo:
 
 ![Creating a Repository on GitLab (Step 1)](../fig/gitlab-create-repo-01.png)
 
-Name your repository `planets_coll_swctest` and then click `New project`:
+Name your repository `planets_vlad` and then click `New project`:
 
 ![Creating a Repository on GitLab (Step 2)](../fig/gitlab-create-repo-02.png)
 
@@ -47,8 +47,8 @@ information on how to configure your local repository:
 This effectively does the following on GitLab's servers:
 
 ~~~
-$ mkdir planets_coll_swctest
-$ cd planets_coll_swctest
+$ mkdir planets_vlad
+$ cd planets_vlad
 $ git init
 ~~~
 {: .bash}
@@ -84,7 +84,7 @@ Copy that URL from the browser, go into the local `planets` repository, and run
 this command:
 
 ~~~
-$ git remote add origin https://gitlab.ift.uam-csic.es/scwtest/planets_coll_swctest.git
+$ git remote add origin https://gitlab.ift.uam-csic.es/scwtest/planets_vlad.git
 ~~~
 {: .bash}
 
@@ -99,8 +99,8 @@ $ git remote -v
 {: .bash}
 
 ~~~
-origin   https://gitlab.ift.uam-csic.es/scwtest/planets_coll_swctest.git (push)
-origin   https://gitlab.ift.uam-csic.es/scwtest/planets_coll_swctest.git (fetch)
+origin   https://gitlab.ift.uam-csic.es/scwtest/planets_vlad.git (push)
+origin   https://gitlab.ift.uam-csic.es/scwtest/planets_vlad.git (fetch)
 ~~~
 {: .output}
 
@@ -133,7 +133,7 @@ Delta compression using up to 4 threads.
 Compressing objects: 100% (6/6), done.
 Writing objects: 100% (9/9), 821 bytes, done.
 Total 9 (delta 2), reused 0 (delta 0)
-To https://gitlab.ift.uam-csic.es/scwtest/planets_coll_swctest
+To https://gitlab.ift.uam-csic.es/scwtest/planets_vlad
  * [new branch]      master -> master
 Branch master set up to track remote branch master from origin.
 ~~~
@@ -205,7 +205,7 @@ $ git pull origin master
 {: .bash}
 
 ~~~
-From https://gitlab.ift.uam-csic.es/scwtest/planets_coll_swctest
+From https://gitlab.ift.uam-csic.es/scwtest/planets_vlad
  * branch            master     -> FETCH_HEAD
 Already up-to-date.
 ~~~
@@ -217,7 +217,7 @@ GitLab, though, this command would download them to our local repository.
 
 > ## GitLab GUI
 >
-> Browse to your `planets_coll_swctest` repository on GitLab.
+> Browse to your `planets_vlad` repository on GitLab.
 > In the home or Details tab, find and click on the text that say "Commits(XX)" (where "XX" is some number).
 > Hover over, and click on, the three buttons to the right of each commit.
 > What information can you gather/explore from these buttons?
