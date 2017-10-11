@@ -21,19 +21,18 @@ only thing missing is to copy changes from one repository to another.
 Systems like Git allow us to move work between any two repositories.  In
 practice, though, it's easiest to use one copy as a central hub, and to keep it
 on the web rather than on someone's laptop.  Most programmers use hosting
-services like [GitLab](http://github.com), [BitBucket](http://bitbucket.org) or
+services like [GitHub](http://github.com), [BitBucket](http://bitbucket.org) or
 [GitLab](http://gitlab.com/) to hold those master copies; we'll explore the pros
 and cons of this in the final section of this lesson.
 
 Let's start by sharing the changes we've made to our current project with the
-world.  Log in to GitLab, then click on the icon in the top right corner to
-create a new repository called `planets_vlad`. The coll stands for collaboration 
-and we chose it this way to emphasize the difference with our local `planets` folder. The convenience of 
+world.  Log in to GitLab, then click on the icon `New project` to
+create a new repository called `planets_??`. Replace ?? with your own username, `vlad` in my case. We chose it this way to emphasize the difference with our local `planets` folder. The convenience of 
 it will be apparent very soon. Meanwhile let's create the repo:
 
 ![Creating a Repository on GitLab (Step 1)](../fig/gitlab-create-repo-01.png)
 
-Name your repository `planets_vlad` and then click `New project`:
+Name your repository (`planets_vlad` in my case) and then click `New project`:
 
 ![Creating a Repository on GitLab (Step 2)](../fig/gitlab-create-repo-02.png)
 
