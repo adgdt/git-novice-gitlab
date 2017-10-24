@@ -26,12 +26,7 @@ $ pwd
 ~~~
 {: .bash}
 
-If you are still in `moons` navigate back up to `planets`
-
-~~~
-$ cd ..
-~~~
-{: .bash}
+If you are not navigate back up to `planets`.
 
 Let's create a file called `mars.txt` that contains some notes
 about the Red Planet's suitability as a base.

@@ -39,8 +39,7 @@ which means that any changes pushed to
 another Git host server
 in a later lesson will include this information.
 
-For these lessons, we will be interacting with [GitHub](http://github.com/) and so the email address used should be the same as the one used when setting up your GitHub account. If you are concerned about privacy, please review [GitHub's instructions for keeping your email address private][git-privacy]. 
-If you elect to use a private email address with GitHub, then use that same email address for the `user.email` value, e.g. `username@users.noreply.github.com` replacing `username` with your GitHub one. You can change the email address later on by using the `git config` command again.
+For these lessons, we will be interacting with [GitLab](http://gitlab.ift.uam-csic.es/) and so the email address used should be the same as the one used when setting up your GitLab account.  
 
 Dracula also has to set his favorite text editor, following this table:
 
